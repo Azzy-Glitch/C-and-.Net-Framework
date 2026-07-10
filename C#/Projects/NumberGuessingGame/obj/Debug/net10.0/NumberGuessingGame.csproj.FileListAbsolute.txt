@@ -1,0 +1,15 @@
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\bin\Debug\net10.0\NumberGuessingGame.exe
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\bin\Debug\net10.0\NumberGuessingGame.deps.json
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\bin\Debug\net10.0\NumberGuessingGame.runtimeconfig.json
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\bin\Debug\net10.0\NumberGuessingGame.dll
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\bin\Debug\net10.0\NumberGuessingGame.pdb
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\obj\Debug\net10.0\NumberGuessingGame.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\obj\Debug\net10.0\NumberGuessingGame.AssemblyInfoInputs.cache
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\obj\Debug\net10.0\NumberGuessingGame.AssemblyInfo.cs
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\obj\Debug\net10.0\NumberGuessingGame.csproj.CoreCompileInputs.cache
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\obj\Debug\net10.0\NumberGuessingGame.sourcelink.json
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\obj\Debug\net10.0\NumberGuessingGame.dll
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\obj\Debug\net10.0\refint\NumberGuessingGame.dll
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\obj\Debug\net10.0\NumberGuessingGame.pdb
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\obj\Debug\net10.0\NumberGuessingGame.genruntimeconfig.cache
+D:\Git Repository\C#  and .Net Framework\C#\Projects\NumberGuessingGame\obj\Debug\net10.0\ref\NumberGuessingGame.dll

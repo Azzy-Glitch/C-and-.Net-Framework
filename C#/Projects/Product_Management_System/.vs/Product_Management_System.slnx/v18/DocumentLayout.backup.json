@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Git Repository\\C#  and .Net Framework\\C#\\Projects\\Product_Management_System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBE6A27-F0AD-413C-BAB1-DF26928F663B}|Product_Management_System.csproj|d:\\git repository\\c#  and .net framework\\c#\\projects\\product_management_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBE6A27-F0AD-413C-BAB1-DF26928F663B}|Product_Management_System.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EBE6A27-F0AD-413C-BAB1-DF26928F663B}|Product_Management_System.csproj|d:\\git repository\\c#  and .net framework\\c#\\projects\\product_management_system\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EBE6A27-F0AD-413C-BAB1-DF26928F663B}|Product_Management_System.csproj|solutionrelative:product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Git Repository\\C#  and .Net Framework\\C#\\Projects\\Product_Management_System\\Product.cs",
+              "RelativeDocumentMoniker": "Product.cs",
+              "ToolTip": "D:\\Git Repository\\C#  and .Net Framework\\C#\\Projects\\Product_Management_System\\Product.cs*",
+              "RelativeToolTip": "Product.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:55:41.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Git Repository\\C#  and .Net Framework\\C#\\Projects\\Product_Management_System\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Git Repository\\C#  and .Net Framework\\C#\\Projects\\Product_Management_System\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAAAKgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:54:09.474Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

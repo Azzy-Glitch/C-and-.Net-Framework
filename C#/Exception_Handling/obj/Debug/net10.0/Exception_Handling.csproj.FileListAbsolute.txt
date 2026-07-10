@@ -1,0 +1,15 @@
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\bin\Debug\net10.0\Exception_Handling.exe
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\bin\Debug\net10.0\Exception_Handling.deps.json
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\bin\Debug\net10.0\Exception_Handling.runtimeconfig.json
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\bin\Debug\net10.0\Exception_Handling.dll
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\bin\Debug\net10.0\Exception_Handling.pdb
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\obj\Debug\net10.0\Exception_Handling.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\obj\Debug\net10.0\Exception_Handling.AssemblyInfoInputs.cache
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\obj\Debug\net10.0\Exception_Handling.AssemblyInfo.cs
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\obj\Debug\net10.0\Exception_Handling.csproj.CoreCompileInputs.cache
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\obj\Debug\net10.0\Exception_Handling.sourcelink.json
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\obj\Debug\net10.0\Exception_Handling.dll
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\obj\Debug\net10.0\refint\Exception_Handling.dll
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\obj\Debug\net10.0\Exception_Handling.pdb
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\obj\Debug\net10.0\Exception_Handling.genruntimeconfig.cache
+D:\Git Repository\C#  and .Net Framework\C#\Exception_Handling\obj\Debug\net10.0\ref\Exception_Handling.dll

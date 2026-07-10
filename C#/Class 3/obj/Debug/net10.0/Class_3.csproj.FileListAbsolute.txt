@@ -1,0 +1,15 @@
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\obj\Debug\net10.0\Class_3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\obj\Debug\net10.0\Class_3.AssemblyInfoInputs.cache
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\obj\Debug\net10.0\Class_3.AssemblyInfo.cs
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\obj\Debug\net10.0\Class_3.csproj.CoreCompileInputs.cache
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\obj\Debug\net10.0\Class_3.sourcelink.json
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\bin\Debug\net10.0\Class_3.exe
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\bin\Debug\net10.0\Class_3.deps.json
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\bin\Debug\net10.0\Class_3.runtimeconfig.json
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\bin\Debug\net10.0\Class_3.dll
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\bin\Debug\net10.0\Class_3.pdb
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\obj\Debug\net10.0\Class_3.dll
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\obj\Debug\net10.0\refint\Class_3.dll
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\obj\Debug\net10.0\Class_3.pdb
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\obj\Debug\net10.0\Class_3.genruntimeconfig.cache
+D:\Git Repository\C#  and .Net Framework\C#\Class 3\obj\Debug\net10.0\ref\Class_3.dll

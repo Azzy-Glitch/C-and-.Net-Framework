@@ -1,0 +1,15 @@
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\bin\Debug\net10.0\ContactManager.exe
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\bin\Debug\net10.0\ContactManager.deps.json
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\bin\Debug\net10.0\ContactManager.runtimeconfig.json
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\bin\Debug\net10.0\ContactManager.dll
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\bin\Debug\net10.0\ContactManager.pdb
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\obj\Debug\net10.0\ContactManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\obj\Debug\net10.0\ContactManager.AssemblyInfoInputs.cache
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\obj\Debug\net10.0\ContactManager.AssemblyInfo.cs
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\obj\Debug\net10.0\ContactManager.csproj.CoreCompileInputs.cache
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\obj\Debug\net10.0\ContactManager.sourcelink.json
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\obj\Debug\net10.0\ContactManager.dll
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\obj\Debug\net10.0\refint\ContactManager.dll
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\obj\Debug\net10.0\ContactManager.pdb
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\obj\Debug\net10.0\ContactManager.genruntimeconfig.cache
+D:\Git Repository\C#  and .Net Framework\C#\Projects\ContactManager\obj\Debug\net10.0\ref\ContactManager.dll
