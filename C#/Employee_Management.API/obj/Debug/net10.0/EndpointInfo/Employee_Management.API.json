@@ -330,7 +330,9 @@
             }
           }
         }
-      },
+      }
+    },
+    "/api/Login/UserValidation": {
       "post": {
         "tags": [
           "Login"
@@ -339,17 +341,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Login"
+                "$ref": "#/components/schemas/LoginDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Login"
+                "$ref": "#/components/schemas/LoginDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Login"
+                "$ref": "#/components/schemas/LoginDto"
               }
             }
           }
@@ -474,6 +476,26 @@
             "nullable": true
           },
           "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDto": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          },
+          "password": {
+            "pattern": "^[A-Z].{7,}$",
             "type": "string",
             "nullable": true
           }

@@ -172,14 +172,14 @@
   {
     "ContainingType": "Employee_Management.API.Controllers.LoginController",
     "Method": "AddUser",
-    "RelativePath": "api/Login/UserData",
+    "RelativePath": "api/Login/UserValidation",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "Employee_Management.API.Model.Login",
+        "Name": "dto",
+        "Type": "Employee_Management.API.Dtos.LoginDto",
         "IsRequired": true
       }
     ],

@@ -1,4 +1,5 @@
-﻿using Employee_Management.API.Model;
+﻿using Employee_Management.API.Dtos;
+using Employee_Management.API.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Employee_Management.API.Controllers
@@ -7,7 +8,7 @@ namespace Employee_Management.API.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        public List<Login> users = new List<Login>();
+        public static List<Login> users = new List<Login>();
 
         [HttpGet("UserData")]
 
@@ -21,14 +22,22 @@ namespace Employee_Management.API.Controllers
             return users;
         }
 
-        [HttpPost("UserData")]
-        public IActionResult AddUser(Login user)
+        [HttpPost("UserValidation")]
+        public IActionResult AddUser(LoginDto dto)
         {
-            if (user == null || string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password))
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
+
+            var user = new Login
             {
-                return BadRequest("Invalid user data.");
-            }
+                Email = dto.Email,
+                Password = dto.Password
+            };
+
             users.Add(user);
+
             return Ok("User added successfully.");
         }
     }
