@@ -3,8 +3,9 @@
     public class Employee
     {
         public int Id { get; set; }
-        public required string Name { get; set; }
-        public required string Department { get; set; }
+        public string Name { get; set; }
+        public string Department { get; set; }
         public double Salary { get; set; }
+        public string Email { get; set; }
     }
 }

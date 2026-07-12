@@ -1,51 +1,6 @@
 ﻿using Employee_Management.API.Model;
 using Microsoft.AspNetCore.Mvc;
-
-namespace Employee_Management.API.Controllers
-{
-    [Route("api/[controller]")]
-    [ApiController]
-    public class EmployeeController : ControllerBase
-    {
-        //GLOBAL LIST
-        private static List<Employee> employees = new List<Employee>
-        {
-            new Employee { Id = 1, Name = "Ali", Department = "IT", Salary = 50000 },
-            new Employee { Id = 2, Name = "Ahmed", Department = "HR", Salary = 40000 },
-            new Employee { Id = 3, Name = "Sara", Department = "Finance", Salary = 60000 }
-        };
-
-        // GET: api/Employee
-        [HttpGet]
-        public List<Employee> GetEmployees()
-        {
-            return employees;
-        }
-
-        // GET: api/Employee/single
-        [HttpGet("single")]
-        public Employee GetEmployee()
-        {
-            return employees.FirstOrDefault();
-        }
-
-        // GET: api/Employee/1
-        [HttpGet("{id}")]
-        public Employee GetEmployeeById(int id)
-        {
-            return employees.FirstOrDefault(x => x.Id == id);
-        }
-
-        // GET: api/Employee/name/Ali
-        [HttpGet("name/{name}")]
-        public List<Employee> GetEmployeeByName(string name)
-        {
-            return employees
-                .Where(x => x.Name.ToLower().Contains(name.ToLower()))
-                .ToList();
-        }
-    }
-}
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 //namespace Employee_Management.API.Controllers
 //{
@@ -84,19 +39,6 @@ namespace Employee_Management.API.Controllers
 //            });
 
 //            return employee;
-//        }
-
-//        // GET: api/Employee/single
-//        [HttpGet("single")]
-//        public Employee GetEmployee()
-//        {
-//            return new Employee
-//            {
-//                Id = 1,
-//                Name = "Ali",
-//                Department = "IT",
-//                Salary = 50000
-//            };
 //        }
 
 //        // GET: api/Employee/1
@@ -169,3 +111,92 @@ namespace Employee_Management.API.Controllers
 //        }
 //    }
 //}
+
+namespace Employee_Management.API.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class EmployeeController : ControllerBase
+    {
+        private static List<Employee> employees = new List<Employee>
+        {
+            new Employee { Id = 1, Name = "Ali", Department = "IT", Salary = 50000, Email = "ali@gmail.com" },
+            new Employee { Id = 2, Name = "Ahmed", Department = "HR", Salary = 40000, Email = "ahmed@gmail.com" },
+            new Employee { Id = 3, Name = "Sara", Department = "Finance", Salary = 60000, Email = "Sara@gmail.com" }
+        };
+
+        List<EmployeeDto> employeesDto = new List<EmployeeDto>();
+
+        // GET: api/Employee
+        [HttpGet]
+        public List<Employee> GetEmployees()
+        {
+            return employees;
+        }
+
+        // GET: api/Employee/1
+        [HttpGet("{id}")]
+        public Employee GetEmployeeById(int id)
+        {
+            return employees.FirstOrDefault(x => x.Id == id);
+        }
+
+        // GET: api/Employee/name/Ali
+        [HttpGet("name/{name}")]
+        public List<Employee> GetEmployeeByName(string name)
+        {
+            return employees
+                .Where(x => x.Name.ToLower().Contains(name.ToLower()))
+                .ToList();
+        }
+
+        //[HttpPost("AddEmployee")]
+        //public List<Employee> AddEmployee(Employee employee)
+        //{
+        //    employee.Id = employees.Max(x => x.Id) + 1;
+        //    employees.Add(employee);
+        //    return employees;
+        //}
+
+        [HttpPost("AddEmployee")]
+        public List<Employee> AddEmployee(EmployeeDto employeeDto)
+        {
+            Employee employee = new Employee();
+
+            employee.Id = (employees.Count == 0) ? 1 : employees.Max(x => x.Id) + 1;
+            employee.Name = employeeDto.Name;
+            employee.Department = employeeDto.Department;
+            employee.Salary = employeeDto.Salary;
+            employee.Email = employeeDto.Email;
+
+            employees.Add(employee);
+
+            return employees;
+        }
+
+        [HttpPut("UpdateEmployee")]
+        public  List<Employee> UpdateEmployee(Employee employee)
+        {
+            var existingEmployee = employees.FirstOrDefault(x => x.Id == employee.Id);
+
+            if (existingEmployee != null)
+            {
+                existingEmployee.Name = employee.Name;
+                existingEmployee.Department = employee.Department;
+                existingEmployee.Salary = employee.Salary;
+            }
+            return employees;
+        }
+
+        [HttpDelete("DeleteEmployee/{id}")]
+        public List<Employee> DeleteEmployee(int id)
+        {
+            var employeeToRemove = employees.FirstOrDefault(x => x.Id == id);
+            if (employeeToRemove != null)
+            {
+                employees.Remove(employeeToRemove);
+            }
+            return employees;
+        }
+    }
+}
