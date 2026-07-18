@@ -1,5 +1,5 @@
-﻿using Employee_Management.API.Model;
-using Microsoft.AspNetCore.Mvc;
+﻿//using Employee_Management.API.Model;
+//using Microsoft.AspNetCore.Mvc;
 
 //namespace Employee_Management.API.Controllers
 //{
@@ -200,7 +200,107 @@ using Microsoft.AspNetCore.Mvc;
 //    }
 //}
 
+//using Employee_Management.API.Data;
+//using Employee_Management.API.Model;
+//using Microsoft.AspNetCore.Mvc;
+
+
+//namespace Employee_Management.API.Controllers
+//{
+//    [Route("api/[controller]")]
+//    [ApiController]
+//    public class EmployeeController : ControllerBase
+//    {
+//        private readonly EmployeeDbContext _context;
+
+//        public EmployeeController(EmployeeDbContext context)
+//        {
+//            _context = context;
+//        }
+
+//        // GET: api/Employee
+//        [HttpGet]
+//        public List<Employee> GetEmployees()
+//        {
+//            return _context.Employees.ToList();
+//        }
+
+//        // GET: api/Employee/1
+//        [HttpGet("{id}")]
+//        public Employee GetEmployeeById(int id)
+//        {
+//            return _context.Employees.FirstOrDefault(x => x.Id == id);
+//        }
+
+//        // GET: api/Employee/name/Ali
+//        [HttpGet("name/{name}")]
+//        public List<Employee> GetEmployeeByName(string name)
+//        {
+//            return _context.Employees
+//                .Where(x => x.Name.ToLower().Contains(name.ToLower()))
+//                .ToList();
+//        }
+
+//        // POST: api/Employee/AddEmployee
+//        [HttpPost("AddEmployee")]
+//        public List<Employee> AddEmployee(EmployeeDto employeeDto)
+//        {
+//            var employee = new Employee
+//            {
+//                Name = employeeDto.Name,
+//                Department = employeeDto.Department,
+//                Designation = employeeDto.Department,
+//                Salary = employeeDto.Salary,
+//                Email = employeeDto.Email
+//            };
+
+//            _context.Employees.Add(employee);
+//            _context.SaveChanges();
+
+//            return _context.Employees.ToList();
+//        }
+
+//        // PUT: api/Employee/UpdateEmployee
+//        [HttpPut("UpdateEmployee")]
+//        public List<Employee> UpdateEmployee(Employee employee)
+//        {
+//            var existingEmployee = _context.Employees.FirstOrDefault(x => x.Id == employee.Id);
+
+//            if (existingEmployee != null)
+//            {
+//                existingEmployee.Name = employee.Name;
+//                existingEmployee.Department = employee.Department;
+//                existingEmployee.Salary = employee.Salary;
+//                existingEmployee.Email = employee.Email;
+
+//                _context.SaveChanges();
+//            }
+
+//            return _context.Employees.ToList();
+//        }
+
+//        // DELETE: api/Employee/DeleteEmployee/1
+//        [HttpDelete("DeleteEmployee/{id}")]
+//        public List<Employee> DeleteEmployee(int id)
+//        {
+//            var employeeToRemove = _context.Employees.FirstOrDefault(x => x.Id == id);
+
+//            if (employeeToRemove != null)
+//            {
+//                _context.Employees.Remove(employeeToRemove);
+//                _context.SaveChanges();
+//            }
+
+//            return _context.Employees.ToList();
+//        }
+//    }
+//}
+
+
 using Employee_Management.API.Data;
+using Employee_Management.API.Model;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Employee_Management.API.Controllers
 {
@@ -217,78 +317,103 @@ namespace Employee_Management.API.Controllers
 
         // GET: api/Employee
         [HttpGet]
-        public List<Employee> GetEmployees()
+        public async Task<ActionResult<List<Employee>>> GetEmployees()
         {
-            return _context.Employees.ToList();
+            var employees = await _context.Employees.ToListAsync();
+            return Ok(employees);
         }
 
         // GET: api/Employee/1
         [HttpGet("{id}")]
-        public Employee GetEmployeeById(int id)
+        public async Task<ActionResult<Employee>> GetEmployeeById(int id)
         {
-            return _context.Employees.FirstOrDefault(x => x.Id == id);
+            var employee = await _context.Employees.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (employee == null)
+                return NotFound();
+
+            return Ok(employee);
         }
 
         // GET: api/Employee/name/Ali
         [HttpGet("name/{name}")]
-        public List<Employee> GetEmployeeByName(string name)
+        public async Task<ActionResult<List<Employee>>> GetEmployeeByName(string name)
         {
-            return _context.Employees
+            var employees = await _context.Employees
                 .Where(x => x.Name.ToLower().Contains(name.ToLower()))
-                .ToList();
+                .ToListAsync();
+
+            return Ok(employees);
         }
 
         // POST: api/Employee/AddEmployee
         [HttpPost("AddEmployee")]
-        public List<Employee> AddEmployee(EmployeeDto employeeDto)
+        public async Task<ActionResult<List<Employee>>> AddEmployee(EmployeeDto employeeDto)
         {
             var employee = new Employee
             {
-                Name = employeeDto.Name,
-                Department = employeeDto.Department,
-                Designation = employeeDto.Department,
-                Salary = employeeDto.Salary,
-                Email = employeeDto.Email
+                Name = employeeDto.DName,
+                Department = employeeDto.DDepartment,
+                Designation = employeeDto.DDesignation,
+                Salary = employeeDto.DSalary,
+                Email = employeeDto.DEmail
             };
 
-            _context.Employees.Add(employee);
-            _context.SaveChanges();
+            await _context.Employees.AddAsync(employee);
+            await _context.SaveChangesAsync();
 
-            return _context.Employees.ToList();
+            var employees = await _context.Employees.ToListAsync();
+
+            return Ok(employees);
         }
 
         // PUT: api/Employee/UpdateEmployee
         [HttpPut("UpdateEmployee")]
-        public List<Employee> UpdateEmployee(Employee employee)
+        public async Task<ActionResult<List<Employee>>> UpdateEmployee(EmployeeDto employeeDto)
         {
-            var existingEmployee = _context.Employees.FirstOrDefault(x => x.Id == employee.Id);
+            var existingEmployee = await _context.Employees.FirstOrDefaultAsync(x => x.Id == employeeDto.Id);
 
-            if (existingEmployee != null)
-            {
-                existingEmployee.Name = employee.Name;
-                existingEmployee.Department = employee.Department;
-                existingEmployee.Salary = employee.Salary;
-                existingEmployee.Email = employee.Email;
+            if (existingEmployee == null)
+                return NotFound();
 
-                _context.SaveChanges();
-            }
+            existingEmployee.Name = employeeDto.DName;
+            existingEmployee.Department = employeeDto.DDepartment;
+            existingEmployee.Salary = employeeDto.DSalary;
+            existingEmployee.Email = employeeDto.DEmail;
 
-            return _context.Employees.ToList();
+            await _context.SaveChangesAsync();
+
+            var employees = await _context.Employees.ToListAsync();
+            return Ok(employees);
         }
 
         // DELETE: api/Employee/DeleteEmployee/1
         [HttpDelete("DeleteEmployee/{id}")]
-        public List<Employee> DeleteEmployee(int id)
+        public async Task<ActionResult<List<Employee>>> DeleteEmployee(int id)
         {
-            var employeeToRemove = _context.Employees.FirstOrDefault(x => x.Id == id);
+            var employeeToRemove = await _context.Employees.FirstOrDefaultAsync(x => x.Id == id);
 
-            if (employeeToRemove != null)
-            {
-                _context.Employees.Remove(employeeToRemove);
-                _context.SaveChanges();
-            }
+            if (employeeToRemove == null)
+                return NotFound();
 
-            return _context.Employees.ToList();
+            _context.Employees.Remove(employeeToRemove);
+            await _context.SaveChangesAsync();
+
+            var employees = await _context.Employees.ToListAsync();
+            return Ok(employees);
+        }
+
+        [HttpPost("ResetAndSeed")]
+        public async Task<IActionResult> ResetAndSeed()
+        {
+            _context.Employees.RemoveRange(_context.Employees);
+            await _context.SaveChangesAsync();
+
+            await _context.Database.ExecuteSqlRawAsync("DBCC CHECKIDENT ('Employees', RESEED, 0)");
+
+            await DbInitializer.SeedEmployees(_context);
+
+            return Ok("Database reset and seeded.");
         }
     }
 }

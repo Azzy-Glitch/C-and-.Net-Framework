@@ -46,47 +46,6 @@ namespace Employee_Management.API.Data
             modelBuilder.Entity<Login>()
                 .HasIndex(x => x.Email)
                 .IsUnique();
-
-            //modelBuilder.Entity<Login>().HasData(
-            //    new Login
-            //    {
-            //        Id = 1,
-            //        Email = "admin@test.com",
-            //        Password = "admin123"
-            //    });
-
-                    //modelBuilder.Entity<Employee>().HasData(
-                    //    new Employee
-                    //    {
-                    //        Id = 1,
-                    //        Name = "Ali",
-                    //        Email = "ali@gmail.com",
-                    //        Designation = "Software Engineer",
-                    //        Department = "IT",
-                    //        Salary = 50000,
-                    //        IsDeleted = false
-                    //    },
-                    //    new Employee
-                    //    {
-                    //        Id = 2,
-                    //        Name = "Ahmed",
-                    //        Email = "ahmed@gmail.com",
-                    //        Designation = "HR Manager",
-                    //        Department = "Human Resources",
-                    //        Salary = 40000,
-                    //        IsDeleted = false
-                    //    },
-                    //    new Employee
-                    //    {
-                    //        Id = 3,
-                    //        Name = "Sara",
-                    //        Email = "sara@gmail.com",
-                    //        Designation = "Finance Officer",
-                    //        Department = "Finance",
-                    //        Salary = 60000,
-                    //        IsDeleted = false
-                    //    }
-                    //);
-                }
+        }
     }
 }

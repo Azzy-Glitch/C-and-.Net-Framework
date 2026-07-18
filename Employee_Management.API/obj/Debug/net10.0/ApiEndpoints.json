@@ -125,6 +125,16 @@
   },
   {
     "ContainingType": "Employee_Management.API.Controllers.EmployeeController",
+    "Method": "ResetAndSeed",
+    "RelativePath": "api/Employee/ResetAndSeed",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Employee_Management.API.Controllers.EmployeeController",
     "Method": "UpdateEmployee",
     "RelativePath": "api/Employee/UpdateEmployee",
     "HttpMethod": "PUT",
@@ -132,14 +142,71 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "employee",
-        "Type": "Employee_Management.API.Model.Employee",
+        "Name": "employeeDto",
+        "Type": "Employee_Management.API.Model.EmployeeDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[Employee_Management.API.Model.Employee, Employee_Management.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Employee_Management.API.Controllers.LoginController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/Login/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Employee_Management.API.Dtos.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Employee_Management.API.Model.Login",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Employee_Management.API.Controllers.LoginController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Login/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Employee_Management.API.Model.Login",
         "MediaTypes": [
           "text/plain",
           "application/json",

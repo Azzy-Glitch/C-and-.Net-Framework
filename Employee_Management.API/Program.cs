@@ -20,6 +20,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<EmployeeDbContext>();
+    await DbInitializer.SeedEmployees(context);
+}
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

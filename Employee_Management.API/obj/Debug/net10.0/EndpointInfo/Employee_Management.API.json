@@ -197,17 +197,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Employee"
+                "$ref": "#/components/schemas/EmployeeDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Employee"
+                "$ref": "#/components/schemas/EmployeeDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Employee"
+                "$ref": "#/components/schemas/EmployeeDto"
               }
             }
           }
@@ -294,6 +294,18 @@
         }
       }
     },
+    "/api/Employee/ResetAndSeed": {
+      "post": {
+        "tags": [
+          "Employee"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Login/UserData": {
       "get": {
         "tags": [
@@ -359,6 +371,103 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Login/{id}": {
+      "put": {
+        "tags": [
+          "Login"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Login"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              }
+            }
           }
         }
       }
@@ -443,13 +552,13 @@
       },
       "EmployeeDto": {
         "required": [
-          "department",
-          "designation",
-          "email",
-          "id",
-          "name",
-          "phonenumber",
-          "salary"
+          "dDepartment",
+          "dDesignation",
+          "dEmail",
+          "dName",
+          "dPhoneNumber",
+          "dSalary",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -457,28 +566,28 @@
             "type": "integer",
             "format": "int32"
           },
-          "name": {
+          "dName": {
             "type": "string",
             "nullable": true
           },
-          "phonenumber": {
+          "dPhoneNumber": {
             "pattern": "^(\\+92|0)3\\d{9}$",
             "type": "string",
             "nullable": true
           },
-          "department": {
+          "dDepartment": {
             "type": "string",
             "nullable": true
           },
-          "designation": {
+          "dDesignation": {
             "type": "string",
             "nullable": true
           },
-          "salary": {
+          "dSalary": {
             "type": "number",
             "format": "double"
           },
-          "email": {
+          "dEmail": {
             "type": "string",
             "format": "email",
             "nullable": true
@@ -509,9 +618,9 @@
       },
       "LoginDto": {
         "required": [
-          "email",
-          "id",
-          "password"
+          "dEmail",
+          "dPassword",
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -519,12 +628,12 @@
             "type": "integer",
             "format": "int32"
           },
-          "email": {
+          "dEmail": {
             "type": "string",
             "format": "email",
             "nullable": true
           },
-          "password": {
+          "dPassword": {
             "pattern": "^[A-Z].{7,}$",
             "type": "string",
             "nullable": true
