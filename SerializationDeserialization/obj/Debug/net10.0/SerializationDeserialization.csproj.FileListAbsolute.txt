@@ -1,0 +1,15 @@
+D:\Git Repository\C#  and .Net Framework\Class 3\bin\Debug\net10.0\SerializationDeserialization.exe
+D:\Git Repository\C#  and .Net Framework\Class 3\bin\Debug\net10.0\SerializationDeserialization.deps.json
+D:\Git Repository\C#  and .Net Framework\Class 3\bin\Debug\net10.0\SerializationDeserialization.runtimeconfig.json
+D:\Git Repository\C#  and .Net Framework\Class 3\bin\Debug\net10.0\SerializationDeserialization.dll
+D:\Git Repository\C#  and .Net Framework\Class 3\bin\Debug\net10.0\SerializationDeserialization.pdb
+D:\Git Repository\C#  and .Net Framework\Class 3\obj\Debug\net10.0\SerializationDeserialization.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git Repository\C#  and .Net Framework\Class 3\obj\Debug\net10.0\SerializationDeserialization.AssemblyInfoInputs.cache
+D:\Git Repository\C#  and .Net Framework\Class 3\obj\Debug\net10.0\SerializationDeserialization.AssemblyInfo.cs
+D:\Git Repository\C#  and .Net Framework\Class 3\obj\Debug\net10.0\SerializationDeserialization.csproj.CoreCompileInputs.cache
+D:\Git Repository\C#  and .Net Framework\Class 3\obj\Debug\net10.0\SerializationDeserialization.sourcelink.json
+D:\Git Repository\C#  and .Net Framework\Class 3\obj\Debug\net10.0\SerializationDeserialization.dll
+D:\Git Repository\C#  and .Net Framework\Class 3\obj\Debug\net10.0\refint\SerializationDeserialization.dll
+D:\Git Repository\C#  and .Net Framework\Class 3\obj\Debug\net10.0\SerializationDeserialization.pdb
+D:\Git Repository\C#  and .Net Framework\Class 3\obj\Debug\net10.0\SerializationDeserialization.genruntimeconfig.cache
+D:\Git Repository\C#  and .Net Framework\Class 3\obj\Debug\net10.0\ref\SerializationDeserialization.dll
